@@ -1,5 +1,5 @@
 # PINTU Data Analyst Assessment - CoinX Data Solution
- 
+
 This repository contains the end-to-end data transformation and modeling solution designed to address the leadership's primary concerns regarding **Trading Concentration Risk**, **User Retention**, and **Data Governance**.
 
 The final data architecture uses a **Star Schema** to provide performant, clear data for reporting via BigQuery.
@@ -33,6 +33,4 @@ This specific language is used to leverage proprietary functions necessary for t
 
 ## Report / Dashboard Layout
 
-
-Google Sheets : https://docs.google.com/spreadsheets/d/1RjQ0Ldk9_urFU4XStiXmTGO53sxSHVXQcelkWuMfiHU/edit?gid=499880761#gid=499880761
-
+Google Sheets : https://docs.google.com/spreadsheets/d/1RjQ0Ldk9_urFU4XStiXmTGO53sxSHVXQcelkWuMfiHU/

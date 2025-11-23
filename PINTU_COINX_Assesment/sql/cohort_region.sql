@@ -17,7 +17,7 @@ with usercohort as  (
 ,monthly_activity AS (
     select
         t1.user_id,
-        date_trunc(t1.trade_created_time, month) AS activity_month
+        date_trunc(t1.trade_created_time, month) activity_month
     from `datamart.fact_transactions_trades` t1
     join `datamart.dim_date` t3 on date(t1.trade_created_time) = t3.date_key
     group by 1, 2
@@ -27,11 +27,11 @@ with usercohort as  (
     select
         c.signup_month
         ,c.region
-        ,date_diff(a.activity_month, c.signup_month, month) AS months_since_signup,
-        count(distinct c.user_id) AS retained_users
+        ,date_diff(a.activity_month, c.signup_month, month) months_since_signup,
+        count(distinct c.user_id) retained_users
     from usercohort c
-    join monthly_activity a ON c.user_id = a.user_id
-    where a.activity_month >= c.signup_month -- Hanya hitung retensi setelah signup
+    join monthly_activity a on c.user_id = a.user_id
+    where a.activity_month >= c.signup_month 
     group by 1, 2, 3
 )
 
