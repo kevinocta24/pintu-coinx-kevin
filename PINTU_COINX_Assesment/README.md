@@ -9,7 +9,7 @@ The final data architecture uses a **Star Schema** to provide performant, clear 
 | Layer | Purpose | Key Deliverable | Location |
 | :--- | :--- | :--- | :--- |
 | **Source** | Raw data storage (untransformed strings). | `raw_trades`, `raw_p2p_transfers` | `raw_transaction` schema |
-| **Model** | Cleaned, transformed, and enriched data mart. | `fact_transactions_p2p_transfers`  `fact_transactions_trades`, `dim_users`, `dim_tokens` | `data_mart` schema |
+| **Model** | Cleaned, transformed, and enriched data mart. | `fact_transactions_p2p_transfers`  `fact_transactions_trades`, `dim_users`, `dim_tokens` | `datamart` schema |
 | **Governance**| Data quality and compliance policies. | **Anomaly Detection ($P_{99.9}$)** | `docs/Data_Governance_Plan.md` |
 
 ## 📦 Repository Contents
@@ -32,5 +32,6 @@ This specific language is used to leverage proprietary functions necessary for t
 * **Time Series Analysis:** `DATE_TRUNC`.
 
 ## Report / Dashboard Layout
+
 
 Google Sheets : https://docs.google.com/spreadsheets/d/1RjQ0Ldk9_urFU4XStiXmTGO53sxSHVXQcelkWuMfiHU/edit?gid=499880761#gid=499880761
